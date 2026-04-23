@@ -1,0 +1,15 @@
+server:
+  port: 8082
+
+spring:
+  kafka:
+    bootstrap-servers: localhost:9092
+    streams:
+      application-id: stream-processor
+      properties:
+        default.key.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+        default.value.serde: org.apache.kafka.common.serialization.Serdes$StringSerde
+  data:
+    redis:
+      host: localhost
+      port: 6379
