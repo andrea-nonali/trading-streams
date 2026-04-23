@@ -1,6 +1,15 @@
 server:
   port: 8082
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, metrics
+  metrics:
+    tags:
+      service: stream-processor
+
 spring:
   kafka:
     bootstrap-servers: localhost:9092
@@ -13,3 +22,7 @@ spring:
     redis:
       host: localhost
       port: 6379
+
+app:
+  window:
+    duration-seconds: 300

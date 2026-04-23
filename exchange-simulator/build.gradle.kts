@@ -14,8 +14,15 @@ repositories {
 }
 
 dependencies {
-    implementation("org.springframework.boot:spring-boot-starter")
+    implementation("org.springframework.boot:spring-boot-starter-web")
     implementation("org.springframework.kafka:spring-kafka")
     implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
     implementation("org.jetbrains.kotlin:kotlin-reflect")
+    implementation("org.springframework.boot:spring-boot-starter-actuator")
+    implementation("io.micrometer:micrometer-registry-prometheus")
+
+    testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.springframework.kafka:spring-kafka-test")
+    testImplementation("org.testcontainers:kafka")
+    testImplementation("org.testcontainers:junit-jupiter")
 }

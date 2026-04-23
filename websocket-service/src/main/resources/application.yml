@@ -1,13 +1,17 @@
 server:
   port: 8081
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, metrics
+  metrics:
+    tags:
+      service: websocket-service
+
 spring:
   kafka:
     bootstrap-servers: localhost:9092
     consumer:
       group-id: websocket-service
-      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
-      value-deserializer: org.springframework.kafka.support.serializer.JsonDeserializer
-      properties:
-        spring.json.trusted.packages: "*"
-        spring.json.value.default.type: com.tradingstreams.websocket.PriceTick

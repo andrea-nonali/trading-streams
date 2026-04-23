@@ -1,3 +1,15 @@
+server:
+  port: 8080
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus, health, metrics
+  metrics:
+    tags:
+      service: exchange-simulator
+
 spring:
   kafka:
     bootstrap-servers: localhost:9092
