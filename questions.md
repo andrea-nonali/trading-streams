@@ -1,0 +1,14 @@
+- Can you explain the stream processor line by line?
+- How does KafkaTemplate know which host and port to connect to?
+- Does Kafka have one partition per key, can we configure partitions?
+- Is the producer fire and forget, sync, or async, and how are exceptions, rebalancing, serialization, and       
+  idempotency handled?
+- Why are we using Zookeeper instead of KRaft?
+- Why use Confluent's Kafka image?
+- In a real production system how does the exchange simulator look?
+- Can we simulate a real trading fintechs scale with realistic stock numbers and higher frequency?
+- Is while (!Thread.currentThread().isInterrupted) about daemon threads?
+  - questions about threading in general
+- Can you explain TopStocksProcessor row by row?
+  - Does the stream run in a loop and how does it get data from Kafka?
+  - Why is RocksDB used, did you choose it?
